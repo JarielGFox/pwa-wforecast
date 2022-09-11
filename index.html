@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="js-loading">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Intestazione -->
+        <header>
+            <img src="img/sunsetlogo.png" alt="Forecast">
+        </header>
+    
+        <!-- Main Content -->
+    
+        <main>
+            <!-- Informazioni -->
+            <div class="weather-info">
+                <!-- Icona No Geoloc -->
+                <div class="no-geoloc hidden" id="no-geoloc"><img src="img/nogeoloc.png" alt="No Geolocation"/></div>
+                <!-- Icona previsioni--> 
+                <img class="weather-icon" src="img/wind.png" alt="">
+
+                <!-- Location -->
+                <div class="weather-location">[Awaiting location...]</div>
+
+                <!-- Temperatura -->
+                <div class="weather-temperature"></div>
+            </div>
+
+          <!-- Pannello Meteo -->
+          <div class="advice-box">
+            <h4>Advice:</h4>
+            <p class="suggestion">Remember your umbrella!</p>
+          </div>
+        </main>
+    </div>
+    <!-- JS -->
+    <script src="advices.js"></script>
+    <script src="script.js"></script>
+</body>
+ </html>
