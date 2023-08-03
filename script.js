@@ -19,14 +19,13 @@ window.navigator.geolocation.getCurrentPosition(onSuccess, onError);
 // Da eseguire in caso di errore:
 
 function onError(error) {
-    weatherLocation.innerText = 'User denied Geolocation!'; 
+    weatherLocation.innerText = 'User denied Geolocation!';
     document.getElementById('no-geoloc').classList.remove('hidden');
 };
 
 // Da eseguire in caso di successo:  
 
 function onSuccess(position) {
-    console.log(position);
     document.getElementById('no-geoloc').classList.add('hidden');
 
     // Prepariamo i dati API:
@@ -36,24 +35,20 @@ function onSuccess(position) {
     // Costruiamo l'indirizzo comprensivo di query string:
 
     const apiUri = `${endPoint}?lon=${longitude}&lat=${latitude}&units=${units}&lang=${langauge}&appid=${apiKey}` // La chiave del parametro della query string deve essere quello della documentazione o la query string non funziona!
-    
+
     // Chiamiamo la API:
 
-    fetch(apiUri).then(function(response) {
-        console.log('data is fetched!');
+    fetch(apiUri).then(function (response) {
         // trasformo risposta in formato json
         const data = response.json();
         return data;
-    }).then(function(data) {
-        console.log(data);
+    }).then(function (data) {
 
         // Estrapoliamo le info che ci servono
         const locationName = data.name;
         const temperature = Math.floor(data.main.temp);
         const iconCode = data.weather[0].icon;
         const description = data.weather[0].description;
-        
-
 
         // Prepariamo il consiglio giusto:
         const advices = getAdvice(iconCode);
@@ -74,6 +69,5 @@ function onSuccess(position) {
 function getAdvice(iconCode) {
 
     return advices[iconCode];
-   
+
 };
-console.log('script ends!')
