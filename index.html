@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js-loading">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,22 +13,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="manifest" href="site.webmanisfest">
 </head>
+
 <body>
     <div class="container">
         <!-- Intestazione -->
         <header>
             <img src="img/sunsetlogo.png" alt="Forecast">
         </header>
-    
+
         <!-- Main Content -->
-    
+
         <main>
             <!-- Informazioni -->
             <div class="weather-info">
                 <!-- Icona No Geoloc -->
-                <div class="no-geoloc hidden" id="no-geoloc"><img src="img/nogeoloc.png" alt="No Geolocation"/></div>
-                <!-- Icona previsioni--> 
+                <div class="no-geoloc hidden" id="no-geoloc"><img src="img/nogeoloc.png" width="100" height="100"
+                        alt="No Geolocation" /></div>
+                <!-- Icona previsioni-->
                 <img class="weather-icon" src="img/wind.png" alt="">
 
                 <!-- Location -->
@@ -37,15 +41,16 @@
                 <div class="weather-temperature"></div>
             </div>
 
-          <!-- Pannello Meteo -->
-          <div class="advice-box">
-            <h4>Advice:</h4>
-            <p class="suggestion">Remember your umbrella!</p>
-          </div>
+            <!-- Pannello Meteo -->
+            <div class="advice-box">
+                <h4>Advice:</h4>
+                <p class="suggestion">Remember your umbrella!</p>
+            </div>
         </main>
     </div>
     <!-- JS -->
-    <script src="advices.js"></script>
     <script src="script.js"></script>
+    <script src="advices.js"></script>
 </body>
- </html>
+
+</html>
